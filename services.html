@@ -146,11 +146,25 @@
 <li><a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-body-md text-body-md" href="services.html">الخدمات</a></li>
 <li><a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors font-body-md text-body-md" href="contact.html">اتصل بنا</a></li>
 </ul>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:opacity-90 hover:scale-[1.02] transition-all active:scale-95">
+<div class="flex items-center gap-3">
+    <button type="button" id="menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-primary" aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
+    <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:opacity-90 hover:scale-[1.02] transition-all active:scale-95">
                 احجز الآن
             </button>
+</div>
 </nav>
 </header>
+
+<!-- Mobile menu (hidden by default) -->
+<div id="mobile-menu" class="hidden border-t border-surface-container bg-white/95 backdrop-blur-md px-gutter py-4 flex flex-col gap-1">
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-primary font-bold" href="index.html">الرئيسية</a>
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-on-surface-variant" href="about.html">عن الطبيب</a>
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-on-surface-variant" href="services.html">الخدمات</a>
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-on-surface-variant" href="contact.html">اتصل بنا</a>
+<button type="button" data-book class="mt-2 w-full bg-primary text-on-primary py-3 rounded-full font-label-md">احجز الآن</button>
+</div>
 <!-- Hero Section -->
 <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden mt-16">
 <div class="absolute inset-0 z-0">
@@ -241,6 +255,7 @@
 <a href="contact.html" data-book class="fixed bottom-8 left-8 z-40 bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all md:bottom-12 md:left-12" aria-label="احجز موعد">
 <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
 </a>
+<script src="assets/js/main.js"></script>
 <script>
         // Simple scroll interaction for header
         window.addEventListener('scroll', () => {
