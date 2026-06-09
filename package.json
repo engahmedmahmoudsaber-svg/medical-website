@@ -1,0 +1,13 @@
+{
+  "name": "stitch-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch-stitch": "node scripts/fetch-stitch.mjs",
+    "build": "node scripts/build-site.mjs",
+    "serve": "npx --yes serve ."
+  },
+  "dependencies": {
+    "@google/stitch-sdk": "^0.1.0"
+  }
+}

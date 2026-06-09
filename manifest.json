@@ -1,0 +1,41 @@
+{
+  "projectId": "16183829837667648123",
+  "screens": [
+    {
+      "slug": "screen-1",
+      "title": "screen-1",
+      "screenId": "a9050236e0154a60887a0fd6b2762721",
+      "html": "src/screen-1.html"
+    },
+    {
+      "slug": "screen-2",
+      "title": "screen-2",
+      "screenId": "1b6387e356284dcda853b99a2f9367cb",
+      "html": "src/screen-2.html"
+    },
+    {
+      "slug": "screen-4",
+      "title": "screen-4",
+      "screenId": "0c2e6fad86ca4357bbcb538735f0519e",
+      "html": "src/screen-4.html"
+    },
+    {
+      "slug": "screen-5",
+      "title": "screen-5",
+      "screenId": "6a742ac218fa4e3aa987b11bd8bda1b4",
+      "html": "src/screen-5.html"
+    },
+    {
+      "slug": "screen-7",
+      "title": "screen-7",
+      "screenId": "982666a49cdd405582f044835f685a6c",
+      "html": "src/screen-7.html"
+    },
+    {
+      "slug": "screen-8",
+      "title": "screen-8",
+      "screenId": "569a71e2c7bc4e0b8392a544da50ec89",
+      "html": "src/screen-8.html"
+    }
+  ]
+}

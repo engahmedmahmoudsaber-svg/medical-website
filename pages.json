@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "الرئيسية",
+      "source": "src/screen-4.html"
+    },
+    {
+      "file": "about.html",
+      "title": "عن الطبيب",
+      "source": "src/screen-5.html"
+    },
+    {
+      "file": "credentials.html",
+      "title": "المؤهلات",
+      "source": "src/screen-1.html"
+    },
+    {
+      "file": "services.html",
+      "title": "الخدمات",
+      "source": "src/screen-7.html"
+    },
+    {
+      "file": "ivf.html",
+      "title": "الحقن المجهري",
+      "source": "src/screen-2.html"
+    },
+    {
+      "file": "contact.html",
+      "title": "اتصل بنا",
+      "source": "src/screen-8.html"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>د. محمود صابر | استشاري أمراض النساء والتوليد</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        :root {
+            --clinic-shadow: 0px 12px 32px rgba(77, 166, 255, 0.08);
+        }
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .clinic-card-shadow {
+            shadow: var(--clinic-shadow);
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#4e616a",
+                        "surface-container-low": "#eff4ff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#404752",
+                        "on-secondary-fixed-variant": "#364952",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#2a1800",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-fixed": "#001c37",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d2e4ff",
+                        "outline": "#707783",
+                        "outline-variant": "#c0c7d4",
+                        "on-background": "#101c2c",
+                        "on-primary-fixed-variant": "#00497e",
+                        "on-secondary-fixed": "#0a1e26",
+                        "tertiary-fixed": "#ffddb5",
+                        "secondary-fixed-dim": "#b5cad4",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#003a67",
+                        "primary": "#0061a5",
+                        "surface": "#f8f9ff",
+                        "surface-container": "#e6eeff",
+                        "background": "#f8f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#0061a5",
+                        "surface-dim": "#cedbf0",
+                        "surface-container-highest": "#d7e3f9",
+                        "on-surface": "#101c2c",
+                        "surface-variant": "#d7e3f9",
+                        "surface-container-high": "#dde9ff",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary": "#835400",
+                        "primary-container": "#4da6ff",
+                        "tertiary-fixed-dim": "#ffb956",
+                        "secondary-fixed": "#d1e6f1",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#d1e6f1",
+                        "inverse-surface": "#253141",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#a0caff",
+                        "on-tertiary-container": "#503200",
+                        "on-secondary-container": "#546771",
+                        "tertiary-container": "#de9200",
+                        "inverse-primary": "#a0caff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "section-gap": "64px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "container-margin": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "body-md": ["IBM Plex Sans Arabic"],
+                        "body-lg": ["IBM Plex Sans Arabic"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "label-md": ["IBM Plex Sans Arabic"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-surface/80 backdrop-blur-md border-b border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)]">
+<div class="flex flex-row-reverse justify-between items-center w-full px-gutter md:px-20 py-4 gap-4">
+<a href="index.html" class="font-headline-md text-headline-md text-primary dark:text-primary-fixed font-bold tracking-tight shrink-0">د. محمود صابر</a>
+<nav class="hidden lg:flex flex-row-reverse gap-4 xl:gap-6 items-center overflow-x-auto" aria-label="التنقل الرئيسي">
+<a class="font-body-md text-body-md transition-colors py-1 block md:inline whitespace-nowrap text-primary dark:text-primary-fixed font-bold border-b-2 border-primary" href="index.html">الرئيسية</a>
+<a class="font-body-md text-body-md transition-colors py-1 block md:inline whitespace-nowrap text-on-surface-variant dark:text-outline hover:text-primary" href="about.html">عن الطبيب</a>
+
+<a class="font-body-md text-body-md transition-colors py-1 block md:inline whitespace-nowrap text-on-surface-variant dark:text-outline hover:text-primary" href="services.html">الخدمات</a>
+
+<a class="font-body-md text-body-md transition-colors py-1 block md:inline whitespace-nowrap text-on-surface-variant dark:text-outline hover:text-primary" href="contact.html">اتصل بنا</a>
+</nav>
+<div class="flex items-center gap-3 shrink-0">
+<button type="button" data-book class="hidden sm:inline-flex bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-md text-label-md hover:opacity-90 hover:scale-[1.02] active:scale-95 transition-all shadow-md">احجز الآن</button>
+<button type="button" id="menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-primary" aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden lg:hidden border-t border-surface-container bg-white/95 backdrop-blur-md px-gutter py-4 flex flex-col gap-1">
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-primary font-bold" href="index.html">الرئيسية</a>
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-on-surface-variant" href="about.html">عن الطبيب</a>
+
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-on-surface-variant" href="services.html">الخدمات</a>
+
+<a class="block py-3 px-4 rounded-lg hover:bg-surface-container-low text-on-surface-variant" href="contact.html">اتصل بنا</a>
+<button type="button" data-book class="mt-2 w-full bg-primary text-on-primary py-3 rounded-full font-label-md">احجز الآن</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface-bright px-gutter md:px-20 py-12">
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 flex flex-col gap-6" data-aos="fade-left">
+<div class="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-2 rounded-full w-fit">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="font-label-md text-label-md">استشاري النساء والتوليد وتأخر الإنجاب والحقن المجهري وجراحات المناظير الدقيقة</span>
+</div>
+<h1 class="font-display-lg text-[40px] md:text-display-lg leading-tight text-on-background">
+                        خبرة أكثر من 20 عامًا في <span class="text-primary">رعاية صحة المرأة</span> وعلاج تأخر الإنجاب
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">متابعة الحمل والولادة، الحقن المجهري، جراحات المناظير الدقيقة، وأحدث خدمات النساء والتوليد في بيئة طبية متكاملة تهتم براحتك وخصوصيتك.</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button data-whatsapp class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] active:scale-95 transition-all shadow-lg">
+<span class="material-symbols-outlined">chat</span>
+                            احجزي موعد عبر واتساب
+                        </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary/5 active:scale-95 transition-all">
+<span class="material-symbols-outlined">call</span>
+                            اتصلي الآن
+                        </button>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="relative z-10 rounded-[32px] overflow-hidden shadow-2xl border-8 border-white">
+<img alt="Dr. Mahmoud Saber" class="w-full h-full object-cover aspect-[4/5] md:aspect-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAUiQxw0MaQoMDEfFDP-3Bori0OfwAwFR6gkrUiyAhqxp96CTJ547GcpQVVdHJQ-9Q8BCMa5gfsxJ0dXC3sRAS-5X0SQU8drPrYTFGp-ZeFQ-gUUjjki-mP4KR8Gdw5G4P4FEtJ0va3hV83jBbSDfrHTLnbadmML39u5CdUnptHkxJm5MLRLwPsyA4F7q23MgtNR881rCW-0ml2Vs9-LJyZmQDVz2yUnQbqpuzkY96FBmMy_ioS5Jrc7f3l2k9Z_HNy9feOwONzCJ7">
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-primary-container/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-tertiary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Highlights Bento -->
+<section class="px-gutter md:px-20 py-section-gap bg-white">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-8 rounded-[24px] border border-outline-variant/30 flex flex-col gap-4 hover:shadow-xl transition-shadow group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md">+20 سنة خبرة</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">مسيرة مهنية حافلة بالنجاحات في أكبر المستشفيات التعليمية والخاصة في مصر.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-[24px] border border-outline-variant/30 flex flex-col gap-4 hover:shadow-xl transition-shadow group">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: &quot;FILL&quot; 1;">family_restroom</span>
+</div>
+<h3 class="font-headline-md text-headline-md">تأخر الإنجاب</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">حلول متطورة للحقن المجهري وعلاج العقم باستخدام أحدث البروتوكولات الطبية.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-[24px] border border-outline-variant/30 flex flex-col gap-4 hover:shadow-xl transition-shadow group">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: &quot;FILL&quot; 1;">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md">المناظير الدقيقة</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">جراحات المناظير النسائية (EDGES) لتقليل الألم وفترة النقاهة بعد العمليات.</p>
+</div>
+</div>
+</section>
+<!-- Doctor Bio -->
+<section class="px-gutter md:px-20 py-section-gap bg-surface-container-lowest" id="about">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="relative aspect-square rounded-[40px] overflow-hidden shadow-lg order-2 md:order-1">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up of a modern, clinical interior featuring medical certificates on a minimalist wall and a stethoscope resting on a clean white desk. The lighting is soft and natural, pouring in from a nearby window, creating a warm and professional atmosphere. The color palette is dominated by soft whites and clinical blues, maintaining a serene and trustworthy medical aesthetic. High-quality professional photography with a focus on clean lines and professional excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4PqnMNtXUFjssAL3b4PFCv5exNP1RcaVcnyjDBBJbbGVGhjBNpUz9LA_zr7JRhdJoMLGcMeTNMoVgfhkehG8B1ViMsQLp-P5_P7rZUTf8LJiaFhYi84dj8KMpMO3Uzi0DBu4biX80PEZp_TJELJ9ZqfyK0QJb0lVnZJEEfi-Zk9KALmaaIG5kkCFgbsaJXHSKn3jCNCrVfLVq-UnK8wqt7wLQYFsBJjHQqpybcVOpcYimUUZDrg4cEVrcUt91zvDFVZIMvZixUYO0">
+</div>
+<div class="flex flex-col gap-6 order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg text-primary">من هو الدكتور محمود صابر؟</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        الدكتور محمود صابر هو استشاري بارز في أمراض النساء والتوليد، كرس حياته المهنية لتوفير أعلى مستويات الرعاية الصحية للمرأة. بفضل خبرته التي تتجاوز العقدين، نجح في مساعدة آلاف الأسر في تحقيق حلم الأمومة.
+                    </p>
+<ul class="flex flex-col gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface">دكتوراه أمراض النساء والتوليد - جامعة عين شمس.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface">زميل الجمعية المصرية لجراحي المناظير.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface">خبير دولي في بروتوكولات الحقن المجهري الحديثة.</p>
+</li>
+</ul>
+<a href="about.html" class="w-fit text-primary font-bold flex items-center gap-2 group">
+                        اعرفي المزيد عن مسيرتنا الطبية
+                        <span class="material-symbols-outlined group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="px-gutter md:px-20 py-section-gap bg-surface" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">خدماتنا الطبية المتخصصة</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">نقدم رعاية شاملة تعتمد على أحدث الأبحاث العلمية والتقنيات الطبية لضمان تجربة صحية آمنة ومريحة.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Card 1 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">pregnant_woman</span>
+<h4 class="font-headline-md text-[20px] mb-2">متابعة الحمل</h4>
+<p class="font-body-md text-on-surface-variant">رعاية دورية دقيقة للأم والجنين طوال فترات الحمل المختلفة.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">child_care</span>
+<h4 class="font-headline-md text-[20px] mb-2">الولادة الطبيعية</h4>
+<p class="font-body-md text-on-surface-variant">تجربة ولادة آمنة وبدون ألم باستخدام أحدث الوسائل الطبية.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">medical_services</span>
+<h4 class="font-headline-md text-[20px] mb-2">الولادة القيصرية</h4>
+<p class="font-body-md text-on-surface-variant">جراحات قيصرية تجميلية مع تقنيات تقليل الندوب والألم.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">biotech</span>
+<h4 class="font-headline-md text-[20px] mb-2">سونار رباعي الأبعاد</h4>
+<p class="font-body-md text-on-surface-variant">تصوير دقيق للجنين للاطمئنان على سلامته في جميع المراحل.</p>
+</div>
+<!-- Service Card 5 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">female</span>
+<h4 class="font-headline-md text-[20px] mb-2">أمراض النساء</h4>
+<p class="font-body-md text-on-surface-variant">تشخيص وعلاج كافة الالتهابات والأمراض النسائية المزمنة.</p>
+</div>
+<!-- Service Card 6 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">av1</span>
+<h4 class="font-headline-md text-[20px] mb-2">علاج العقم</h4>
+<p class="font-body-md text-on-surface-variant">تحاليل شاملة وبرامج مخصصة لزيادة فرص الإنجاب الطبيعي.</p>
+</div>
+<!-- Service Card 7 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">family_restroom</span>
+<h4 class="font-headline-md text-[20px] mb-2">تخطيط الأسرة</h4>
+<p class="font-body-md text-on-surface-variant">استشارات متخصصة حول أفضل وسائل منع الحمل المناسبة.</p>
+</div>
+<!-- Service Card 8 -->
+<div class="bg-white p-8 rounded-[24px] border border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)] hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">healing</span>
+<h4 class="font-headline-md text-[20px] mb-2">جراحة المناظير</h4>
+<p class="font-body-md text-on-surface-variant">عمليات دقيقة لعلاج الأكياس والأورام الليفية بالمنظار.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="px-gutter md:px-20 py-section-gap bg-primary/5">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-12">آراء المراجعات</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-primary/10">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6">"دكتور ممتاز جداً، رحلة حملي كانت مريحة ومطمئنة بفضل الله ثم متابعة الدكتور محمود الدقيقة. والولادة كانت أسهل مما تخيلت."</p>
+<div class="font-label-md text-primary">— أ. سارة أحمد</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-primary/10">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6">"عملت عملية منظار مع الدكتور والحمد لله النتيجة كانت ممتازة وفترة النقاهة كانت قصيرة جداً. بجد شاطر جداً ومحترم."</p>
+<div class="font-label-md text-primary">— مدام مريم ع.</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-primary/10">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface mb-6">"من أحسن الدكاترة اللي تعاملت معاهم، بيسمع للمريض كويس وبيشرح كل حاجة بالتفصيل. أنصح بيه أي حد بيفكر في الحقن المجهري."</p>
+<div class="font-label-md text-primary">— أ. ياسمين م.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Contact -->
+<section class="px-gutter md:px-20 py-section-gap" id="contact">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-8">
+<h2 class="font-headline-lg text-headline-lg">تفضلي بزيارتنا</h2>
+<div class="flex flex-col gap-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-full">location_on</span>
+<div>
+<h5 class="font-bold text-lg mb-1">عنوان العيادة</h5>
+<p class="text-on-surface-variant"> قرية ابوبدوي ، مركز بيلا، كفر الشيخ.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-full">schedule</span>
+<div>
+<h5 class="font-bold text-lg mb-1">مواعيد العمل</h5>
+<p class="text-on-surface-variant">السبت - الخميس: 12الظهر - 7 المغرب </p>
+<p class="text-on-surface-variant"> الجمعة مغلق</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-full">contact_phone</span>
+<div>
+<h5 class="font-bold text-lg mb-1">للتواصل المباشر</h5>
+<p class="text-on-surface-variant">واتساب:  01008561212
+<p class="text-on-surface-variant">هاتف: 01008561212</div>
+</div>
+</div>
+</div>
+<div class="h-[400px] rounded-[32px] overflow-hidden shadow-inner border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A stylized, clean map view of a central Cairo district, highlighting medical hubs and modern infrastructure. The map is designed in a soft minimalist aesthetic with light blues and greys to maintain the medical brand's serenity. Landmarks are subtly marked with professional icons, and the overall lighting is bright and airy. The perspective is a top-down architectural view, representing precision and reliability." data-location="Cairo, Egypt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-uhaowfL-CTLoMN3SXxnDhSAWxgDNGUJTrr--2NONhvgLMd9bObK_1qP6McuIM3W-xILOeAdrA7Aqx9up2VxCzbQIy65VnvGrsPC2hMvmw0xFa_fHWkWfNct9765XBAB4dOrkA_mawdXFk4Fp6fK0oHOEbAewqMswtDx6q7zE9aqvrdcmwnRUALKcX3cs429RIczdSijSNHc87xLjIO1-cmbsMAxnYW6TtEKgogElW15QhklRzmEaqgHe4XBCMULI0frTwCaIcC3C">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-low dark:bg-inverse-surface">
+<div class="flex flex-col gap-stack-md px-gutter md:px-20 py-section-gap w-full">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center gap-stack-md">
+<a href="index.html" class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">د. محمود صابر</a>
+<nav class="flex flex-wrap flex-row-reverse justify-center gap-x-6 gap-y-2" aria-label="روابط الموقع">
+<a class="hover:text-primary transition-colors font-body-md text-body-md text-on-surface-variant" href="index.html">الرئيسية</a>
+<a class="hover:text-primary transition-colors font-body-md text-body-md text-on-surface-variant" href="about.html">عن الطبيب</a>
+
+<a class="hover:text-primary transition-colors font-body-md text-body-md text-on-surface-variant" href="services.html">الخدمات</a>
+
+<a class="hover:text-primary transition-colors font-body-md text-body-md text-on-surface-variant" href="contact.html">اتصل بنا</a>
+</nav>
+</div>
+<div class="flex flex-col md:flex-row-reverse justify-between items-center gap-4 pt-6 border-t border-outline-variant/30">
+<div class="flex flex-row-reverse flex-wrap justify-center gap-6 font-body-md text-body-md text-on-surface-variant">
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">جميع الحقوق محفوظة © 2026 د. محمود صابر</p>
+</div>
+</div>
+</footer>
+<!-- FAB for Quick Contact (Mobile only) -->
+<div class="fixed bottom-8 left-8 z-50 md:hidden">
+<a href="https://wa.me/201234567890" target="_blank" rel="noopener" data-whatsapp class="fixed bottom-8 left-8 z-50 md:hidden w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition-transform" aria-label="تواصل عبر واتساب">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</div>
+
+
+
+<script src="assets/js/main.js"></script>
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        :root {
+            --clinic-shadow: 0px 12px 32px rgba(77, 166, 255, 0.08);
+        }
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .clinic-card-shadow {
+            shadow: var(--clinic-shadow);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .service-card-hover:hover .service-icon-bg {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    </style>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#4e616a",
+                    "surface-container-low": "#eff4ff",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#404752",
+                    "on-secondary-fixed-variant": "#364952",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#2a1800",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary-fixed": "#001c37",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#d2e4ff",
+                    "outline": "#707783",
+                    "outline-variant": "#c0c7d4",
+                    "on-background": "#101c2c",
+                    "on-primary-fixed-variant": "#00497e",
+                    "on-secondary-fixed": "#0a1e26",
+                    "tertiary-fixed": "#ffddb5",
+                    "secondary-fixed-dim": "#b5cad4",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#003a67",
+                    "primary": "#0061a5",
+                    "surface": "#f8f9ff",
+                    "surface-container": "#e6eeff",
+                    "background": "#f8f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#0061a5",
+                    "surface-dim": "#cedbf0",
+                    "surface-container-highest": "#d7e3f9",
+                    "on-surface": "#101c2c",
+                    "surface-variant": "#d7e3f9",
+                    "surface-container-high": "#dde9ff",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary": "#835400",
+                    "primary-container": "#4da6ff",
+                    "tertiary-fixed-dim": "#ffb956",
+                    "secondary-fixed": "#d1e6f1",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#d1e6f1",
+                    "inverse-surface": "#253141",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#a0caff",
+                    "on-tertiary-container": "#503200",
+                    "on-secondary-container": "#546771",
+                    "tertiary-container": "#de9200",
+                    "inverse-primary": "#a0caff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "stack-lg": "32px",
+                    "unit": "8px",
+                    "section-gap": "64px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "container-margin": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "body-md": ["IBM Plex Sans"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "display-lg": ["Be Vietnam Pro"],
+                    "label-md": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-surface/80 backdrop-blur-md border-b border-surface-container shadow-[0px_12px_32px_rgba(77,166,255,0.08)]">
+<nav class="flex flex-row-reverse justify-between items-center w-full px-gutter md:px-20 py-4">
+<!-- Brand Logo -->
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed font-bold">د. محمود صابر</div>
+<!-- Desktop Navigation -->
+<ul class="hidden md:flex flex-row-reverse items-center gap-10">
+<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors font-body-md text-body-md" href="#">الرئيسية</a></li>
+<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors font-body-md text-body-md" href="#">عن الطبيب</a></li>
+<li class=""><a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-body-md text-body-md" href="#">الخدمات</a></li>
+<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors font-body-md text-body-md" href="#">اتصل بنا</a></li>
+</ul>
+<!-- Primary Action -->
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md text-label-md hover:opacity-90 hover:scale-[1.02] transition-all active:scale-95">
+                احجز الآن
+            </button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden mt-16">
+<div class="absolute inset-0 z-0">
+<img alt="Dr. Mahmoud Saber Clinic Services" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3jfQIdb-jIj6vv24ivEXnXifkrHngoW0JGwSrwcevBEO3UFmHE-QUDUhZITpIdmhsSwQkpCoRHARG_KjLixGITH7C3-8pXOvOYcOF2nYhOV0hQS_efeGpYF448oCFll34TBbjS-_Hdfs81Oc0lsN2tXuVTJulL2_HHArApXwXlxcKEzW3RWYAiEQ1Fax3vVmSOg8c5FmpBA4Jbdu9U8uAyweKG_x6zT53RK6vkI-TDkMvni1hSNnC1yy9BUckA87uocbz8aJ0POd1">
+<div class="absolute inset-0 bg-gradient-to-l from-white/90 via-white/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-gutter md:px-20 text-right">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1.5 mb-4 bg-primary/10 text-primary rounded-full font-label-md text-label-md">رعاية طبية متكاملة</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">خدماتنا الطبية المتخصصة</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-8">نقدم في عيادتنا أحدث الحلول الطبية في مجالات أمراض النساء والتوليد والعقم، مع الالتزام بأعلى معايير الراحة والخصوصية لكل أم.</p>
+<div class="flex flex-row-reverse gap-4">
+
+
+</div>
+</div>
+</div>
+</section>
+<!-- Services Hub Content -->
+<main class="py-section-gap px-gutter md:px-20 bg-surface" id="services-grid">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">نحن معكِ في كل خطوة</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">باقة متكاملة من الخدمات الطبية المصممة خصيصاً لتلبية احتياجات المرأة في جميع مراحل حياتها، بأحدث التقنيات العالمية.</p>
+</div>
+<!-- Bento-inspired Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Service 1: Pregnancy Follow-up (Featured) -->
+<div class="md:col-span-8 group service-card-hover bg-surface-container-lowest border border-[#DFF4FF] rounded-2xl p-8 shadow-[0px_12px_32px_rgba(77,166,255,0.08)] transition-all hover:translate-y-[-4px] duration-700 opacity-100 translate-y-0">
+<div class="flex flex-col md:flex-row-reverse items-start gap-8">
+<div class="flex-1 text-right">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center mb-6 service-icon-bg transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">pregnant_woman</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">متابعة الحمل والولادة</h3>
+<p class="font-body-md text-body-md text-secondary mb-6 leading-relaxed">
+                            رعاية استباقية تبدأ من التخطيط للحمل وحتى فترة ما بعد الولادة. تشمل فحوصات دورية دقيقة، مراقبة نمو الجنين، وتقديم النصائح الغذائية والطبية لضمان رحلة آمنة لكل من الأم والجنين.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full text-[12px] font-medium">فحص السونار</span>
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full text-[12px] font-medium">تحاليل دورية</span>
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full text-[12px] font-medium">صحة الجنين</span>
+</div>
+</div>
+<div class="w-full md:w-1/3 rounded-xl overflow-hidden aspect-square md:aspect-auto md:h-full">
+<img alt="Pregnancy Follow up" class="w-full h-full object-cover" data-alt="A close-up shot of a pregnant woman's hands resting on her belly during a medical consultation. The scene is bathed in soft, natural morning light coming through a clinic window. The aesthetic is warm and comforting, using the clinic's signature soft blue and white tones. The mood is hopeful and caring, perfectly capturing the professional yet nurturing approach of the OB-GYN practice." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAecIonFg19pWOKNOIq4tgYghgE-gBCq4r-5bIzmQtPnVIGnxePb9rho0uW9ozsZ6AKfT0Ib5MDancD_sUI6ddnjbWsTC04pzusa0Lv8tabEHWU65-s2ewb9QAJezrD-ZPJpfxX4iCPXjSKEGwQRGMdhcthUlIXDfLKLuoKSCu4HKajSxZElX1jSBG_ItosOfhwn4xb0fDXz6FyRUCVRiZ1NBPUYvvmdFdPHQXoRPnFx5Q2ST9RzAYgog_gU0sGkfjC3Nh71F5Hiuc5">
+</div>
+</div>
+</div>
+<!-- Service 2: Natural & Cesarean Delivery -->
+<div class="md:col-span-4 group service-card-hover bg-surface-container-lowest border border-[#DFF4FF] rounded-2xl p-8 shadow-[0px_12px_32px_rgba(77,166,255,0.08)] transition-all hover:translate-y-[-4px] duration-700 opacity-100 translate-y-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center mb-6 service-icon-bg transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">child_care</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">الولادة (الطبيعية والقيصرية)</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">توفير تجربة ولادة آمنة وخالية من الألم باستخدام أحدث التقنيات الطبية في أرقى المستشفيات المجهزة.</p>
+</div>
+<!-- Service 3: Infertility & IVF -->
+<div class="md:col-span-4 group service-card-hover bg-surface-container-lowest border border-[#DFF4FF] rounded-2xl p-8 shadow-[0px_12px_32px_rgba(77,166,255,0.08)] transition-all hover:translate-y-[-4px] duration-700 opacity-100 translate-y-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center mb-6 service-icon-bg transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">biotech</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">تأخر الإنجاب والحقن المجهري</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">تشخيص دقيق لأسباب تأخر الإنجاب ووضع خطط علاجية متطورة تشمل التلقيح الصناعي والحقن المجهري.</p>
+
+</div>
+<!-- Service 4: 4D Ultrasound -->
+<div class="md:col-span-4 group service-card-hover bg-surface-container-lowest border border-[#DFF4FF] rounded-2xl p-8 shadow-[0px_12px_32px_rgba(77,166,255,0.08)] transition-all hover:translate-y-[-4px] duration-700 opacity-100 translate-y-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center mb-6 service-icon-bg transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">personal_injury</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">السونار رباعي الأبعاد (4D)</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">رؤية واضحة لجنينك واكتشاف أي عيوب خلقية في مراحل مبكرة باستخدام أدق أجهزة السونار الحديثة.</p>
+
+</div>
+<!-- Service 5: Gynecological Endoscopy -->
+<div class="md:col-span-4 group service-card-hover bg-surface-container-lowest border border-[#DFF4FF] rounded-2xl p-8 shadow-[0px_12px_32px_rgba(77,166,255,0.08)] transition-all hover:translate-y-[-4px] duration-700 opacity-100 translate-y-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center mb-6 service-icon-bg transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">المناظير النسائية</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">إجراء العمليات الجراحية المتقدمة مثل استئصال الأورام الليفية وأكياس المبيض باستخدام المنظار بدون جراحة تقليدية.</p>
+</div>
+</div>
+</main>
+<!-- Why Choose Us / Commitment Section -->
+
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-low dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center gap-stack-md px-gutter md:px-20 py-section-gap w-full">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">د. محمود صابر</div>
+<div class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md">جميع الحقوق محفوظة © 2026 د. محمود صابر</div>
+</div>
+</footer>
+<!-- FAB (Floating Action Button) for Booking - Only on Main Destinations -->
+<button class="fixed bottom-8 left-8 z-40 bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all md:bottom-12 md:left-12">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_month</span>
+</button>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Add reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card-hover').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+
+
+</body></html>
