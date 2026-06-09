@@ -10,20 +10,37 @@
         :root {
             --clinic-shadow: 0px 12px 32px rgba(77, 166, 255, 0.08);
         }
-        body {
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html {
             font-family: 'IBM Plex Sans Arabic', sans-serif;
             scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        img, picture, video, iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
         .clinic-card-shadow {
-            shadow: var(--clinic-shadow);
+            box-shadow: var(--clinic-shadow);
         }
         .glass-header {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .service-card-hover:hover .service-icon-bg {
+            transform: scale(1.1) rotate(-5deg);
         }
     </style>
 <script id="tailwind-config">
@@ -150,8 +167,8 @@
 </header>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface-bright px-gutter md:px-20 py-12">
-<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<section class="relative min-h-[70vh] md:min-h-[75vh] flex items-center overflow-hidden bg-surface-bright px-gutter md:px-20 py-10">
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
 <div class="order-2 md:order-1 flex flex-col gap-6" data-aos="fade-left">
 <div class="inline-flex items-center gap-2 bg-primary-container/20 text-primary px-4 py-2 rounded-full w-fit">
 <span class="material-symbols-outlined text-[20px]">verified</span>
@@ -172,7 +189,7 @@
                         </button>
 </div>
 </div>
-<div class="order-1 md:order-2 relative">
+<div class="order-1 md:order-2 relative md:max-w-[520px] mx-auto md:mx-0">
 <div class="relative z-10 rounded-[32px] overflow-hidden shadow-2xl border-8 border-white">
 <img alt="Dr. Mahmoud Saber" class="w-full h-full object-cover aspect-[4/5] md:aspect-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAUiQxw0MaQoMDEfFDP-3Bori0OfwAwFR6gkrUiyAhqxp96CTJ547GcpQVVdHJQ-9Q8BCMa5gfsxJ0dXC3sRAS-5X0SQU8drPrYTFGp-ZeFQ-gUUjjki-mP4KR8Gdw5G4P4FEtJ0va3hV83jBbSDfrHTLnbadmML39u5CdUnptHkxJm5MLRLwPsyA4F7q23MgtNR881rCW-0ml2Vs9-LJyZmQDVz2yUnQbqpuzkY96FBmMy_ioS5Jrc7f3l2k9Z_HNy9feOwONzCJ7">
 </div>

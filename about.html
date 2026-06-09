@@ -8,9 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-        body {
+        :root {
+            --clinic-shadow: 0px 12px 32px rgba(77, 166, 255, 0.08);
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html {
             font-family: 'IBM Plex Sans Arabic', sans-serif;
             scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        img, picture, video, iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -18,10 +34,11 @@
         .glass-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid #DFF4FF;
         }
         .clinic-shadow {
-            box-shadow: 0px 12px 32px rgba(77, 166, 255, 0.08);
+            box-shadow: var(--clinic-shadow);
         }
         .gradient-button {
             background: linear-gradient(180deg, #70B9FF 0%, #4DA6FF 100%);
